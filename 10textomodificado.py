@@ -1,0 +1,7 @@
+nombre=input("ingresa tu nombre: ")
+print (nombre.upper())
+print (nombre.capitalize())
+nombre=nombre.capitalize()
+nombre=nombre.strip()
+print(str(nombre[1]))
+print(len(nombre))
