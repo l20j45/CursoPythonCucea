@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Practica 4</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Hola a todos</h1>
+            </section>
+            <section>
+                <h2>Inicio del curso</h2>
+            </section>
+            <section>Bifurcacion de codigo
+            
+            <section> En sesiones pasadas hemos visto codigos que son lineales, aparte de ser codigos no modulares, son cuestiones que se presentan de inicio a fin sin dar opciones o tomar decisiones
+            </section>
+            <section> Esto esta lejos de la realidad pues tenemos que proveer casos y caminos a seguir en caso de que no se cumpla alguna accion u opcion
+            
+            </section>
+            <section> Ejemplos<br>
+                <img src="img/Valormanzanas.jpg" alt="">
+                <br>
+                que pasa si despues de cierta cantidad de manzanas nosotros ofrecemos algun tipo de descuento?
+            </section>
+
+            <section> <br>
+                <img src="img/Diagrama de flujo manzanas si.jpg" width="35%" height="35%" alt="">
+            </section>
+            <section>
+                Este seria el diagrama de flujo de lo que tendriamos que hacer, pero ahora como hacerlo?
+            </section>
+        </section>
+
+        <section> if en python
+            <section>
+                para esto existe una sentencia que nos ayuda
+                <br> muy parecida al SI en excel
+            </section>
+            <section>
+                Y para utilizarla es de la siguiente manera
+                if "condicion" "agrupadores logicos" : <br>
+                    (identacion) "sentencias"
+            </section>
+            <section>
+                condicionales <br>
+                == &nbsp;&nbsp;&nbsp;&nbsp; igualdar <br>
+                <   &nbsp;&nbsp;&nbsp;&nbsp; menor que<br>
+                >   &nbsp;&nbsp;&nbsp;&nbsp; mayor que<br>
+                >=  &nbsp;&nbsp;&nbsp;&nbsp; mayor igual que<br>
+                <=  &nbsp;&nbsp;&nbsp;&nbsp; menor igual que<br>
+                !   &nbsp;&nbsp;&nbsp;&nbsp; negacion
+            </section>
+            <section>
+                Operadores and y or <br>
+                if today=='Sunday' or today=='Saturday': operador or <br>   
+                if nombre=='daniel' and edad=='26': operador and
+
+            </section>
+            <section>
+                <img src="img/tablasdeverdad.png" alt="">
+
+            </section>
+            <section>
+                ahora si a codificar
+            </section>
+        </section>
+            <section> Si No
+                <section>
+                    Despues tenemos un camino que es el si no 
+
+                </section>
+                <section>
+                <img src="img/Diagrama de flujo manzanas si no.jpg" width="60%" height="60%" alt="">    
+                </section>
+                <section>
+                    para programar esto es asi <br>
+                    if "condicion" "agrupadores logicos" : <br>
+                        (identacion) "sentencias"<br>
+                    else :<br>
+                        (identacion) "sentencias"
+                </section>
+            </section>
+            <section>si, sino, no
+                <section>
+                    La ultima forma son las comparaciones o caminos multiples
+
+                </section>
+                <section>
+                    <img src="img/Diagrama de flujo manzanas si no si no.jpg" width="60%" height="60%" alt="">
+                </section>
+                <section>
+                    para programar esto es asi <br>
+                    if "condicion" "agrupadores logicos" : <br>
+                        (identacion) "sentencias"<br>
+                    elif "condicion" "agrupadores logicos" : <br>
+                    (identacion) "sentencias"<br>
+                    else :<br>
+                        (identacion) "sentencias"
+                </section>
+            </section>
+            <section>
+               Ejercicios propuestos
+               <section>
+                Solicitar al usuario un número de cliente. Si el número es el 1000, imprimir "Ganaste un premio".
+               </section>
+               <section>
+                Solicitar al usuario que ingrese dos números y mostrar cuál de los dos es menor. No considerar el caso en que ambos números son iguales.
+               </section>
+               <section>
+                Solicitar al usuario que ingrese dos números y mostrar cuál de los dos es menor. Considerar el caso en que ambos números son iguales.
+               </section>
+               <section>
+                Hacer un programa que permita saber si un año es bisiesto. Para que un año sea bisiesto debe ser divisible por 4 y no debe ser divisible por 100, excepto que también sea divisible por 400
+               </section>
+               <section>
+                Escriba un programa que pida tres números y que escriba si son los tres iguales, si hay dos iguales o si son los tres distintos.
+               </section>
+            </section>
+            <section>Mejorar nuestro programa de pesos a dolares, pesos a euros, pesos a yanes, dolares a euros, dolares a yuanes, euros a yuanes</section>
+            
+        </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Hola a todos</h1>
+            </section>
+            <section>
+                <h2>Inicio del curso</h2>
+            </section>
+            <section>Variables
+            
+            <section> Que son las variables
+                <span class="fragment">la definicion correcta es:</span><br>
+
+                <span class="fragment">En programación, una variable está formada por un espacio en el sistema de almacenaje (memoria principal de un ordenador) y un nombre simbólico (un identificador) que está asociado a dicho espacio. Ese espacio contiene una cantidad de información conocida o desconocida, es decir un valor. </span>
+            </section>
+            <section> pero en palabras sencillas que son?
+                <span class="fragment">la definicion correcta es:</span><br>
+
+            </section>
+            <section> <br>Ejemplos<br>
+                <span class="fragment">piensa en tu buro o closet donde guardas tu ropa:</span><br>
+
+                <img src="img/closet.png" alt="">
+            </section>
+            <section> <br>Ejemplos<br>
+                <span class="fragment">En excel</span><br>
+
+            </section>
+        </section>
+
+        <section> ¿que es logicamente una variable?
+            <section>
+                Nuestra computadora tiene dos memorias importantes
+            las volatiles :Ram
+            <br> y las estaticas : Discos duros
+            </section>
+            <section>
+                <p>En procesamiento todo lo guarda en las memorias volatiles, 
+                    jamas se guarda nada
+                    hasta que tu le das guardar, por eso en ocasiones cuando trabajas en algo no se guarda
+                </p>
+            </section>
+            <section>
+                ya cuando lo guardas queda en algun medio fisico, cualquiera que sea
+            </section>
+            <section>
+                entonces nosotros cuando programamos trabajamos directo en memoria,
+                la gran mayoria de los programas que ejecutas dependen de la memoria RAM
+                y los calculos los hace el procesador
+            </section>
+            <section>
+                entonces como trabajmos en memoria, depende de nuestra memoria es lo que podemos guardar
+                Ejemplo
+
+                si yo tengo 6 Gb de ram
+                en bits tengo 
+                6*1024*1024*8 =  	48'000'000,000 b
+                gigabytes, megabytes, bytes, bits 
+            </section>
+            <section><br></br>
+                suena a mucho pero cada variable en python necesita espacio<br>
+                <img src="img/tipos de datos.png" alt=""> 
+                <br>(aunque estos son de c)
+            </section>
+        </section>
+            <section> Tipos de valores en las variables
+                <section>
+                    tenemos varios tipos importantes en las variables
+
+                </section>
+                <section>
+                    valores numericos:
+                    enteros = int
+                    valores con punto decimal = float, double
+                </section>
+                <section>
+                    valores de caracteres:
+                    un caracter = char
+                    cadena de caracteres = Strings
+                </section>
+                <section>
+                    valores de booleanos:
+                    estas variables solo pueden tener dos valores: false o true;
+                </section>
+                <section> y con esos trabajaremos por lo pronto
+
+                </section>
+            </section>
+            <section>
+                reglas para definir una variable
+                <section>
+                    <span class="fragment">1.-la primera regla es que debe de comenzar con un caracter</span> <br>
+                    <span class="fragment">2.-no debe de llevar caracteres especiales</span> <br>
+                    <span class="fragment">3.-no debe de contener caracteres especiales</span> 
+                </section>
+            </section>
+            <section>si los valores cambian son variables si no constantes<br>
+                y las constantes comienzan con _
+            </section>
+            <section>
+                Cuando estamos programando tenemos dos tipos de errores
+                <br>semanticos, sintacticos, y logicos
+                <section>
+                    los valores sintacticos de deben a que se escribio mal algo
+                </section>
+                <section>
+                    los errores semanticos a que se esta piiendo cosas que no se pueden realizar o contienen errores logicos
+                </section>
+                <section>
+                    errores logicos, el programa no esta definido de manera correcta, y esto hace que no se pueda llegar al resultado
+                </section>
+            </section>
+            <section>
+                como pedir valores en python
+                con el comando input
+                "nombre de la variable " = input("algo")
+            </section>
+            <section>
+                mejorando nuestro programa de la manzana
+            </section>
+            <section>haciendo un programa que cambie de pesos a dolares</section>
+            
+        </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

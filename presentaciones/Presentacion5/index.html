@@ -1,0 +1,200 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Practica 5</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Hola a todos</h1>
+            </section>
+            <section>
+                <h2>Inicio del curso</h2>
+            </section>
+            <section>
+            
+            <section> Supongamos que hay tareas repetitivas que deben de realizarse o calcularse, como podemos repetir segmentos de codigo para su multiple ejecucion
+            </section>
+            <section> La respuesta a esto son los bucles, o secuencias iterativas
+            </section>
+            <section> Estos son instrucciones especiales que repiten el programa tantas veces se necesite<br>
+            </section>
+            <section>     <img src="img/while.jpg" width="65%" height="65%" alt="">
+                
+            </section>
+            <section>
+                <br>
+                en el programa anterior se va a ejecutar el programa mientras totaldemanzanas sea diferente a 0
+            
+            </section>
+            <section>
+                Este seria el diagrama de flujo de lo que tendriamos que hacer, pero ahora como hacerlo?
+            </section>
+        </section>
+
+        <section> while en python
+            <section>
+                para esto existe una sentencia que nos ayuda
+                <br> WHILE
+            </section>
+            <section>
+                Y para utilizarla es de la siguiente manera
+                while  "condicion" "agrupadores logicos" : <br>
+                    (identacion) "sentencias"
+            </section>
+        </section>
+        <SECtion>Ejercicios propuestos
+            <section>
+                Leer números enteros de teclado, hasta que el usuario ingrese el 0. Finalmente, mostrar la sumatoria de todos los números ingresados.
+            </section>
+            <section>
+                Escriba un algoritmo que lea del teclado un número entero y que compruebe si el número es menor que 10. Si no lo está, debe volver a leer el número repitiendo la operación hasta que el usuario escriba un valor correcto. Finalmente, debe escribir por pantalla el valor leído cuando este sea correcto.    
+            </section>
+            <section>
+                Modifique el algoritmo del problema anterior para que, en vez de comprobar que el número sea menor que 10, compruebe que se encuentre en el rango (0, 20).
+            </section>
+            <section>
+                Modifique el algoritmo del problema anterior para que cuente las veces que ha leído un número de teclado y escriba el resultado por pantalla.
+            </section>
+        </SECtion>
+            <section> For
+                <section>
+                    Ya vimos la sentencia mientras, ahora existe la sentencia desde que nos ayuda a nosotros saber cuantas veces se va a repetir un codigo
+                </section>
+                <section>
+                <img src="img/for.jpg" width="35%" height="35%" alt="">    
+                </section>
+                <section>
+                    para programar esto es asi <br>
+                    for "elemento" int "iterable" : <br>
+                        (identacion) "codigo"<br>
+                </section>
+                <section>
+                    Cosa interesante, en python para la iteracion se define un elemento o rango<br>
+                    esto es a diferencia de los otros lenguajes de programacion<br>
+                    para definir un rango  basico podemos usar el siguiente codigo<br>
+                    table = range(1, 11)
+                </section>
+                <section>
+                    los tipos de datos range corresponden  a tipos de datos especiales que contienen una serie de numeros<br>
+                    la forma de crear una es la siguiente 
+                    range ("numero iniciar","numero final","pasos")
+                </section>
+                <section>
+                    for no solo recorre rangos tambien puede recorrer objetos como diccionarios, listas, pilas, colas arreglos
+                    pero estos datos los veremos mas adelante
+                </section>
+            </section>
+            <section>
+                ejercicios propuestos
+                <section>
+                    Escriba un programa que pida dos números enteros y escriba qué números son pares y cuáles impares desde el primero hasta el segundo.
+                </section>
+                <section>
+                    Imprimir todos los números entre el 100 y el 199.
+                </section>
+                <section>
+                    Imprimir los números entre el 5 y el 20, saltando de tres en tres.
+                </section>
+                <section>
+                    Solicitar al usuario que ingrese una frase y luego imprimir un listado de las vocales que aparecen en esa frase (sin repetirlas).
+                </section>
+            </section>
+
+            <section>Funciones
+                <section>
+                    esa no es la unica forma de repetir codigos, tambien existen las funciones
+                </section>
+                <section>
+                    Que son pequeños segmentos de codigo que pueden ser reutilizados varias veces
+                </section>
+                <section>
+                    la forma de utilizarlas seria la siguiente
+                    def "nombre de la funcion":
+                        (identacion)"codigo"
+                </section>
+                <section>
+                    piensa que a la mejor siempre quieres limpiar pantalla, un separador y un saludo
+                </section>
+                <section>
+                    como lo harias?
+                </section>
+            </section>
+            <section>funciones con parametros
+               <section>
+                las funciones pueden recibir valores para que ejecuten alguna opcion esto se llama parametros 
+                </section>
+                <section>
+                    la forma de usarlas es la siguiente<br>
+                    def "nombre de la funcion ("variable","variable",.....):
+                        (identacion)"codigo"
+                </section>
+               <section>
+               Puedes pasarle cualquier tipo de valor y hacer que en el funcione un miniprograma para que haga cierta opcion<br>
+               supongamos entonces que nuestro programa de venta de manzanas, ahora vende duraznos y peras como podriamos hacerlo
+                </section>
+               <section>
+                porque pasamos las variables como valores? hay algo que se conoce como Variable scope (ambito)<br>
+                esto nos dice que las variables solo existen en donde fueron declaradas<br>
+                esto quiere decir que si tu usas una variable en el programa principal, solo funciona en esa parte<br>
+                y si creas una variable en alguna funcion solo funciona en esa parte
+                </section>
+                <section>
+                    ejemplo
+                </section>
+               <section>
+               pero siguiente esta idea, con el scope nos dice que las variables se quedan dentro de la funcion
+                </section>
+                <section>como podemos sacarlas?
+                </section>
+                
+            </section>
+            <section>funciones con retorno de variable
+                <section>
+                    este tipo de funciones generan su comportamiento, y despues nos devuelven x valor para su uso posterior
+                </section>
+                <section>
+                la forma de utilizarlas es la siguiente<br>
+                def "nombre de la funcion ("variable","variable",.....):
+                (identacion)"codigo"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  return "variable a regresar"
+                        </section>
+                        <section>este tipo de funciones son las mas utiles pues hacen todo su proceso y nos permiten trabajar con los resultados<br>
+                        son una forma de limpiar nuestro codigo, y nos permiten modularizar el codigo<br>
+                        
+                        </section>
+            </section>
+                    </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
