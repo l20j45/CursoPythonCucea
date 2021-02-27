@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Practica 7</title>
+
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Hola a todos</h1>
+            </section>
+            <section>
+                <h2>Inicio del curso</h2>
+            </section>
+            <section>
+            
+            <section> Ya vimos como crear nuestras funciones, hoy vamos a ver unas funciones basicas agregadas naturalmente a python
+            </section>
+            <section> estas funciones nos ayudan a procesar los la informacion para generar una salida
+            </section>
+            <section> para  esto tenemos que entender primero que un String o palabra, es un arreglo de caracteres<br>
+            </section>
+            <section>
+                <br>
+                las funciones mas usadas de este tipo son 
+                nombre=input("ingresa tu nombre: ")<br>
+                print (nombre.upper())<br>
+                print (nombre.capitalize())<br>
+                nombre=nombre.capitalize()<br>
+                </section>
+                <section>
+                nombre=nombre.strip()<br>
+                print(str(nombre[1]))<br>
+                print(len(nombre))<br>
+                palabra = palabra.replace(' ', '').lower()
+            
+                </section>
+            <section>
+                Formas de utilizarlos
+            </section>
+        </section>
+
+        <section>arreglos
+            en python esto no existe, para usarlos lo veremos hasta que terminemos todo el bloque uno porque es usar numpy
+               
+        </section>
+        <section> listas
+            <section>
+                Hasta ahora hemos visto programas sencillos que solo funcionan para un caso de uso
+                no pueden tener muchos valores, y no tienen, para poder hacer multivalores vamos a hacer uso de arreglos, y en este caso listas
+                
+            </section>
+            <section>
+                un conjunto de variables almacenadas consecutivamente en un identificador (apuntador), cuyos elemenos esta enlazados por un apuntador
+            </section>
+            <section>
+                mylist = ["apple", "banana", "cherry"]<br>
+                asi se define una lista <br>
+                <br>
+                print(thislist) <br>
+                asi se imprime <br>
+                
+            </section>
+            <section>
+                print(thislist[1]) <br>
+                tambien puedes imprimir x elemento<br>
+                <br>
+                print(len(thislist))<br>
+                imprime el numero de elementos en la lista<br>
+
+            </section>
+            <section>
+                thislist.append("orange") <br>
+                agrega un valor al final de la lista <br>
+                <br>
+                thislist.remove("banana") <br>
+                borra el elemento en caso de encontrarse<br>
+                <br>
+                thislist.pop()<br> 
+                borra el ultimo elemento
+
+            </section>
+            <section>
+                recorre la lista elemento por elemento <br>
+                thislist = ["apple", "banana", "cherry"] <br>
+                    for x in thislist: <br>
+                        print(x)
+            </section>
+            <section>
+                mylist = thislist.copy() <br>
+                copia las listas <br>
+<br>
+                list3 = list1 + list2 <br>
+                concatena listas
+            </section>
+            <section>
+                ejercicio calcular el promedio de una clase de 10 alumnos usando funciones y listas
+            </section>
+        </section>
+        <SECtion>diccionarios <br>
+            thisdict =	{ <br>
+                "brand": "Ford", <br>
+                "model": "Mustang", <br>
+                "year": 1964 <br>
+              } <br>
+              print(thisdict)
+            
+        
+            </section>
+                    </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
