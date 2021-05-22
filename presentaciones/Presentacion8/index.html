@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Practica 8</title>
+
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Hola a todos</h1>
+            </section>
+            <section>
+                <h2>Inicio del curso</h2>
+            </section>
+            <section>
+
+                <section> Hasta este punto la programacion ha sido modular, y secuencia, pero hay un paradigma mas utilizado en el mundo del software
+                </section>
+                <section> este paradigma nos ayuda a trabjar menor de muchas maneras la abstraccion, pero primero tenemos que definir abstraccion
+                </section>
+                <section> la abstraccion se define como el proceso que se usa para poder detectar las partes importantes sobre el hecho que estamos trabajando<br>
+                </section>
+                <section>
+                    <br> ejemplos de abstraccion
+                    <br>
+                </section>
+                <section>
+                    esta es una de las habilidades mas necesarias para poder convertirse en diseñador de software
+
+                </section>
+                <section>
+                    entre otras cosas hay mas elementos que podemos definir de las clases
+                </section>
+            </section>
+
+            <section>Que es una clase?
+
+            </section>
+            <section> Programacion orientada a objetos
+                <section>
+                    Objeto: <br> Métodos: <br>Atributos:
+
+
+
+
+                </section>
+
+                <section>
+                    por lo general el paradigma de python esta orientado a objetos, muchas de las cosas que hemos trabajo hasta este momento tienen propiedades de objetos
+
+                </section>
+                <section>
+                    por ejemplo los Strings
+
+                </section>
+                <section>
+                    como se codifica una clase class <br> MyClass: x = 5
+                    <br> p1 = MyClass() print(p1.x)
+
+
+
+                </section>
+                <section>
+                    class Person: <br>:identacion: def __init__(self, name, age): <br>:identacion:self.name = name <br>self.age = age <br>p1 = Person("John", 36) <br>print(p1.name) <br>print(p1.age)
+                </section>
+                <section>
+                    <p>
+                        class Person: <br> def __init__(self, name, age): <br>self.name = name <br> self.age = age <br>def myfunc(self): <br>print("Hello my name is " + self.name) <br>p1 = Person("John", 36) <br>p1.myfunc()
+                    </p>
+                </section>
+                <section>
+                    Crear una clase basica para poder usar
+                </section>
+            </section>
+            <SECtion>las clases nos ayudan bastante a clarificar el codigo y separarlo, despues de esto vienen otras propiedasdes de las que vamos a hacer uso, y nos ayudaran a clasificar mejor la informacion
+
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>

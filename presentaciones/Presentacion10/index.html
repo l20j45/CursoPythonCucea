@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Practica 8</title>
+
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Hola a todos</h1>
+            </section>
+            <section>
+                <h2>Ya con los getter an setter podemos hacer uso de otra propiedad llamada sobrecarga de operadores</h2>
+            </section>
+            <section>
+
+                <section> En la sobrecarga de operadores, lo que consiste en que en ocasiones se pueden tener el mismo nombre del metodo, y utilizar en diferentes formas, por lo general se utiliza con los constructores para poder tener varios constructores
+                </section>
+                <section> recordemos que el constructor es quien nos ayuda a definir los parametros iniciales de los objetos, una forma en que podriamos hacerlo es la siguiente
+                </section>
+                <section> <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+import time
+
+class Fecha:
+    def __init__(self, agnio,mes,dia):
+        self.agnio = agnio
+        self.mes = mes
+        self.dia = dia
+    
+    @classmethod
+    def hoy(cls):
+        t = time.localtime()
+
+        return cls(t.tm_year, t.tm_mon, t.tm_mday)
+
+    def __str__(self):
+        return '{}/{}/{}'.format(self.dia, self.mes, self.agnio)
+
+    fecha1 = Fecha(2019,2,21)
+    fecha2 = Fecha.hoy()
+    print (fecha1)
+    print (fecha2)
+        
+                </code></pre>
+                </section>
+                <section>
+                    se pueden importar clases a otros archivos de trabajo para poder seguir usandolos
+                </section>
+                <section>
+                    esta es una de las habilidades mas necesarias para poder convertirse en diseñador de software
+
+                </section>
+                <section>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        import maestros
+
+                    </code></pre>
+                </section>
+            </section>
+
+
+            </section>
+            <section> Herencia
+                <section>
+                    Que es la herencia?
+                </section>
+
+                <section>
+                    en ocasiones podemos hacer una clase general y luego una clase mas especifica pasado todos los elementos, a esto se le llama herencia
+                </section>
+                <section>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                     class Person:
+                        def __init__(self, fname, lname):
+                          self.firstname = fname
+                          self.lastname = lname
+                      
+                        def printname(self):
+                          print(self.firstname, self.lastname)
+                      
+
+                      x = Person("John", "Doe")
+                      x.printname()
+                    </code></pre>
+
+                </section>
+                <section>
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        class Student(Person):
+                        pass
+
+                        x = Student("Mike", "Olsen")
+                        x.printname()
+                    </code></pre>
+
+
+
+                </section>
+                <section>
+                    Usando el constructor padre
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        class Student(Person):
+                        def __init__(self, fname, lname):
+                          super().__init__(fname, lname)
+                    </code></pre> Agregando mas propiedades al constructor padre
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+  class Student(Person):
+  def __init__(self, fname, lname):
+    super().__init__(fname, lname)
+    self.graduationyear = 2019
+                    </code></pre>
+
+                </section>
+                <section>
+
+                    Agregando mas propiedades a la clase hija
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                      class Student(Person):
+                        def __init__(self, fname, lname, year):
+                          super().__init__(fname, lname)
+                          self.graduationyear = year
+                      
+                      x = Student("Mike", "Olsen", 2019)
+                    </code></pre>
+                </section>
+                <section>
+                    definiendo metodos en la clase hija
+
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+class Student(Person):
+  def __init__(self, fname, lname, year):
+    super().__init__(fname, lname)
+    self.graduationyear = year
+
+  def welcome(self):
+    print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+                      </code></pre>
+                </section>
+            </section>
+            <SECtion>las clases nos ayudan bastante a clarificar el codigo y separarlo, despues de esto vienen otras propiedasdes de las que vamos a hacer uso, y nos ayudaran a clasificar mejor la informacion
+
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
