@@ -1,10 +1,11 @@
 from maestro import *
 
 def main():
-    maestro2 = maestro(541115,"luis","contabilidad",12)
-    """ nomina=maestro2.calculoSueldo(10,"Asignatura")
-    print("se le va a pagar esto: "+str(nomina)) """
-    print(maestro2)
+    maestro2 = Investigador(541115,"luis","contabilidad",12,"metodologia")
+    print(maestro2.tiempodetrabajo())
+    print(maestro2.papers)
+        
+    
 
 if __name__ == "__main__":
     main()

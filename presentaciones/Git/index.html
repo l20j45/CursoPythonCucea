@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Curso</title>
+
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Hola a todos</h1>
+            </section>
+            <section>
+                <section>
+                    <h2>Existe un problema persistente en el tema de desarrollo y esto es el control de versiones</h2>
+                </section>
+                <section> <br> primero que es el control de versiones?</section>
+                <section>como manejabas tus versiones en los archivos</section>
+                <section>otro problema a resolver es como trabajas en equipos en tu codigo, o como le hacen las grandes empresas para trabajr en equipo todos en un proyecto?</section>
+            </section>
+            <section>
+
+                <section> para estas dos preguntas las solucion es un sistema de control de versiones colaborativa, tenemos algunos ejemplos como TortoriseCVS, TortoiseSVN, <br> nosotros nos enfocaremos en GIT que es el mas aceptado por la industria
+                </section>
+
+            </section>
+
+            <section>como instalar GIT
+                <section><a href="https://git-scm.com">https://git-scm.com</a> </section>
+                <section>
+                    <a href="https://desktop.github.com">https://desktop.github.com</a></section>
+            </section>
+
+            <section>instalacion
+                <section>instalacion de git en terminal</section>
+                <section>instalacion de github interfaz grafica</section>
+            </section>
+
+            <section>git en terminal
+                <section> primero tenemos que configurar quien esta trabajando el git, y el correo electronico con este codigo
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+git config --global user.name "Daniel Rojas"
+git config --global user.email "l20j45@hotmail.com"
+git config --global core.editor notepad
+</code></pre>
+                </section>
+                <section>
+                    para ver el codigo de quien es el git o como esta configurador podemos usar esta forma
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+git config user.name
+git config user.email
+</code></pre>
+                </section>
+                <section>lo primero que se necesita es colocarnos donde vamos a trabajar en la terminal</section>
+                <section>despues de esto nos vamos a la ruta con los codigos cd, cd .. y mostrando con los codigos DIR</section>
+                <section>
+                    Iniciamos el repositorio en git de esta forma
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git init
+                    </code></pre> Y listo con esto iniciamos el repositorio de git asi de sencillo
+                </section>
+                <section>Que es el stagin <br>
+                    <img src="img/inicial.png" alt=""></section>
+                <section>otra explicacion<br>
+                    <img src="img/segunda 2.png" alt="">
+
+                </section>
+                <section>nosotros para poder trabajar con los archivos no basta con inicir el repositorio, tambien se necesita agregarlos al area de visualizacion para agregarlos al area de stagin o de observacion podemos usar el codigo git add
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git add (filename)
+                        git add .</code></pre>
+                </section>
+                <section>despues de agregarlo al staggin, lo que tendriamos que hacer es cambiarlo del area del stagin a ponerlo en un bloque llamado commit identificado por un hash unico
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git commit -m "Commit message"</code></pre>
+
+                </section>
+                <section>Hasta aqui el uso inicial de git esta cubierto</section>
+                <section>Que pasa si nosotros tenemos que hacer un cambio en el codigo pero no queremos afectar la linea inicial del programa?
+                    <br> para esto usamos
+                    <br> <strong>BRANCHS</strong>
+
+                </section>
+                <section>
+                    <img src="img/tercera.png" alt="">
+                </section>
+                <section>tambien esto nos ayuda muchisimo al trabajo colaborativo</section>
+                <section>para crear la branch podemos hacer de esta forma
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git branch (nombre de la rama)</code></pre>
+
+                </section>
+                <section>para cambiarnos de rama podemos usar el codigo checkout
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git checkout (nombre de la rama)</code></pre>
+                </section>
+                <section>con esto podemos trabajar partes en diferentes ramas sin afectar el codigo inicial y de esta forma probar opciones o probar nuevas acciones en el codigo sin sentir miedo a que no funcione</section>
+                <section>cuando queramos temrinar con la rama y agregarlos a la rama principal podemos usar el codigo merge que seria unir las ramas
+                    <br> 1 cambiar a la rama a donde vamos a unir el codigos
+                    <br> unir el codigos
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+    git merge (branch)</code></pre>
+
+
+                </section>
+                <section>luego guardamos el cambio con un commit o un truco mayor podemos juntar el codigo de git add junto co el codigo commit de esta manera
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git commit -am "comentario"</code></pre>
+
+                </section>
+                <section>podemos ver los cambios entre versiones de los commits o entre las branchs con el comando
+
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git diff</code></pre>
+                </section>
+
+            </section>
+            <section>Trabajar git de termina a github
+                <section>tenemos que tener nuestra cuenta en github o gitlab o gitkraken nosotros usaremos GITHUB</section>
+                <section>despues de esto, yo recomiendo hacer el repositorio en github primero y luego clonar a la computadora</section>
+                <section>
+                    para traer el codigo desde internet podemos usar el vamos a ir a descargar codigo y usar git clone
+                </section>
+                <section>
+                    es mas sencillo trabajarlo asi por cuestiones de practicidad y para tomar menos tiempo lo haremos de esta forma
+                </section>
+                <section>lo siguiente es que con el codigo de
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git pull origin (nombre de la rama)</code></pre>
+
+                </section>
+                <section>
+                    si queremos mandar los cambios a internet tenemos que hacer todo el commit, luego agregar todo y de tal forma mandamos todo a la rama principal, siempre primero lo mandas a main o master depende de, y luego usamos
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                    git pull origin (nombre de la rama)</code></pre>
+
+                    <pre data-id="code-animation"><code class="hljs" data-trim data-line-numbers>
+                        git push origin (nombre de la rama)</code></pre>
+                </section>
+            </section>
+            <section>implementacion de git con vsc
+
+
+                <section>instalamos los siguientes plugins<br>
+                    <ul>
+                        <li>git history</li>
+                        <li>git lens</li>
+                        <li>git graph</li>
+                        <li>git extension pack</li>
+
+                    </ul>
+                </section>
+            </section>
+            <section> en interfaz grafica
+                <section>aqui no hacemos eso, eso es para la raza debil :)</section>
+            </section>
+        </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+</body>
+
+</html>
