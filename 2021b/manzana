@@ -1,0 +1,3 @@
+print("Programa que calcula el costo de las manzanas")
+print("total a pagar")
+print(5*8)

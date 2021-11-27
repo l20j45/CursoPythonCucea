@@ -12,7 +12,7 @@ while casos <= times:
     letras= []
     for a in word:
         letras.append(a)
-        
+          
     for letra in word2:
             if letra==letras[contador]:
                 contador+=1
