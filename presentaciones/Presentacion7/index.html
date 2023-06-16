@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Practica 7</title>
+    <title>Practica 8</title>
 
 
     <link rel="stylesheet" href="dist/reset.css">
@@ -26,101 +26,69 @@
                 <h2>Inicio del curso</h2>
             </section>
             <section>
-            
-            <section> Ya vimos como crear nuestras funciones, hoy vamos a ver unas funciones basicas agregadas naturalmente a python
-            </section>
-            <section> estas funciones nos ayudan a procesar los la informacion para generar una salida
-            </section>
-            <section> para  esto tenemos que entender primero que un String o palabra, es un arreglo de caracteres<br>
-            </section>
-            <section>
-                <br>
-                las funciones mas usadas de este tipo son 
-                nombre=input("ingresa tu nombre: ")<br>
-                print (nombre.upper())<br>
-                print (nombre.capitalize())<br>
-                nombre=nombre.capitalize()<br>
+
+                <section> Hasta este punto la programacion ha sido modular, y secuencia, pero hay un paradigma mas utilizado en el mundo del software
+                </section>
+                <section> este paradigma nos ayuda a trabjar menor de muchas maneras la abstraccion, pero primero tenemos que definir abstraccion
+                </section>
+                <section> la abstraccion se define como el proceso que se usa para poder detectar las partes importantes sobre el hecho que estamos trabajando<br>
                 </section>
                 <section>
-                nombre=nombre.strip()<br>
-                print(str(nombre[1]))<br>
-                print(len(nombre))<br>
-                palabra = palabra.replace(' ', '').lower()
-            
+                    <br> ejemplos de abstraccion
+                    <br>
                 </section>
-            <section>
-                Formas de utilizarlos
-            </section>
-        </section>
+                <section>
+                    esta es una de las habilidades mas necesarias para poder convertirse en diseñador de software
 
-        <section>arreglos
-            en python esto no existe, para usarlos lo veremos hasta que terminemos todo el bloque uno porque es usar numpy
-               
-        </section>
-        <section> listas
-            <section>
-                Hasta ahora hemos visto programas sencillos que solo funcionan para un caso de uso
-                no pueden tener muchos valores, y no tienen, para poder hacer multivalores vamos a hacer uso de arreglos, y en este caso listas
-                
+                </section>
+                <section>
+                    entre otras cosas hay mas elementos que podemos definir de las clases
+                </section>
             </section>
-            <section>
-                un conjunto de variables almacenadas consecutivamente en un identificador (apuntador), cuyos elemenos esta enlazados por un apuntador
-            </section>
-            <section>
-                mylist = ["apple", "banana", "cherry"]<br>
-                asi se define una lista <br>
-                <br>
-                print(thislist) <br>
-                asi se imprime <br>
-                
-            </section>
-            <section>
-                print(thislist[1]) <br>
-                tambien puedes imprimir x elemento<br>
-                <br>
-                print(len(thislist))<br>
-                imprime el numero de elementos en la lista<br>
+
+            <section>Que es una clase?
 
             </section>
-            <section>
-                thislist.append("orange") <br>
-                agrega un valor al final de la lista <br>
-                <br>
-                thislist.remove("banana") <br>
-                borra el elemento en caso de encontrarse<br>
-                <br>
-                thislist.pop()<br> 
-                borra el ultimo elemento
+            <section> Programacion orientada a objetos
+                <section>
+                    Objeto: <br> Métodos: <br>Atributos:
+
+
+
+
+                </section>
+
+                <section>
+                    por lo general el paradigma de python esta orientado a objetos, muchas de las cosas que hemos trabajo hasta este momento tienen propiedades de objetos
+
+                </section>
+                <section>
+                    por ejemplo los Strings
+
+                </section>
+                <section>
+                    como se codifica una clase class <br> MyClass: x = 5
+                    <br> p1 = MyClass() print(p1.x)
+
+
+
+                </section>
+                <section>
+                    class Person: <br>:identacion: def __init__(self, name, age): <br>:identacion:self.name = name <br>self.age = age <br>p1 = Person("John", 36) <br>print(p1.name) <br>print(p1.age)
+                </section>
+                <section>
+                    <p>
+                        class Person: <br> def __init__(self, name, age): <br>self.name = name <br> self.age = age <br>def myfunc(self): <br>print("Hello my name is " + self.name) <br>p1 = Person("John", 36) <br>p1.myfunc()
+                    </p>
+                </section>
+                <section>
+                    Crear una clase basica para poder usar
+                </section>
+            </section>
+            <SECtion>las clases nos ayudan bastante a clarificar el codigo y separarlo, despues de esto vienen otras propiedasdes de las que vamos a hacer uso, y nos ayudaran a clasificar mejor la informacion
 
             </section>
-            <section>
-                recorre la lista elemento por elemento <br>
-                thislist = ["apple", "banana", "cherry"] <br>
-                    for x in thislist: <br>
-                        print(x)
-            </section>
-            <section>
-                mylist = thislist.copy() <br>
-                copia las listas <br>
-<br>
-                list3 = list1 + list2 <br>
-                concatena listas
-            </section>
-            <section>
-                ejercicio calcular el promedio de una clase de 10 alumnos usando funciones y listas
-            </section>
-        </section>
-        <SECtion>diccionarios <br>
-            thisdict =	{ <br>
-                "brand": "Ford", <br>
-                "model": "Mustang", <br>
-                "year": 1964 <br>
-              } <br>
-              print(thisdict)
-            
-        
-            </section>
-                    </div>
+        </div>
     </div>
 
     <script src="dist/reveal.js "></script>

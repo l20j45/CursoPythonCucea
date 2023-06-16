@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Base de datos 1</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/night.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          Historia de la base de datos
+
+          <section>
+            El término “base de datos” se escuchó por primera vez en 1963 en un
+            simposio en California. Se la definió como “un conjunto de
+            “información” relacionada que se encuentra agrupara o estructurada”.
+          </section>
+          <section>
+            Los años 70 y 80 Edgar Frank Codd, científico informático inglés,
+            definió el modelo relacional y publicó una serie de reglas para los
+            sistemas de datos relacionales. Más tarde, el multimillonario
+            Lawrence “Larry” Ellison, aprovechó las aportaciones de Codd para
+            desarrollar el Relational Software System, lo que actualmente se
+            conoce como Oracle Corporation, que se destacaba por su estabilidad,
+            escalabilidad, transacciones y multiplataforma.
+          </section>
+          <section>
+            En la década de los 80 se desarrolló el lenguaje de consulta
+            estructurado (SQL – Structured Query Language) que permitió realizar
+            consultas con el fin de recuperar datos de interés de una base de
+            datos y realizar modificaciones en la misma de forma sencilla.
+          </section>
+          <section>
+            Las bases de datos orientas a objetos surgen para gestionar datos
+            complejos en los campos donde las bases de datos relacionales no han
+            podido desarrollarse de forma eficiente. Aquí aparecen herramientas
+            como Excel y Access. Con la llegada de Internet y la WWW (Word Wide
+            Web) las bases de datos se hicieron más accesibles y evolucionaron
+            poco a poco hasta lo que conocemos hoy en día.
+          </section>
+        </section>
+        <section>
+          Porque no usar excel como una base de datos
+          <section>
+            <ul>
+              <li>No esta centralizado</li>
+              <li>No pueden consultar muchos usuarios al mismo tiempo</li>
+              <li>las consultas no son tan rapidas</li>
+              <li>NO ES SEGURO</li>
+              <li>no se pueden hacer backups de forma sencilla</li>
+            </ul>
+          </section>
+        </section>
+        <section>Que es una base de datos</section>
+<section>es un lugar donde se almacenan dos lados y actualmente son utilizados por un SGDB</section>
+        <section>
+          Ventajas de usar una base de datos
+          <section>
+            <ul>
+              <li>esta centralizadom</li>
+              <li>consultas rapidas</li>
+              <li>se puede replicar la informacion rapidamente</li>
+              <li>distribuidos</li>
+              <li>gran capacidad para grandes datos</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          Tipos de bases de datos que existen
+          <section>
+            <ul>
+              <li>Relacionales</li>
+              <li>No-sql</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          Relacionales
+          <section>
+            son aquelas que estan denominadas como tablas, y se relacion a otras
+            tablas
+          </section>
+          <section>
+            ejemplos de bases de datos relacionales
+
+            <ul>
+              <li>mysql - mariadb</li>
+              <li>postgress</li>
+              <li>Oracle</li>
+              <li>sql server</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          no-sql
+          <section>
+            funcionan como archivos separados que son tratados como colecciones
+            de datos
+          </section>
+          <section>
+            ejemplos de bases de datos no-sql
+
+            <ul>
+              <li>mongodb</li>
+              <li>cassandra</li>
+              <li>redis</li>
+              <li>CouchDb</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          Instalacion de mariadb
+
+          <section>
+            para poder instalarlo vamos a ir a la pagina de
+            <br />
+            <a href="https://mariadb.org/">Mariadb</a>
+            <br />
+            bajamos el instalador e instalamos con algunas configuraciones
+          </section>
+
+          <section>
+            actualmente yo prefiero utilizar laragon para todo este tipo de
+            cosas que es un servidor tipo Lamp para windows <br /><a
+              href="https://laragon.org/download/index.html"
+              >Laragon</a
+            >
+          </section>
+
+          <section>instalamos laragon</section>
+        </section>
+        <section>explicacion de puertos y redes
+<section>como funionan las redes de computadoras</section>
+<section>como funcionan los puertos</section>
+
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js "></script>
+    <script src="plugin/notes/notes.js "></script>
+    <script src="plugin/markdown/markdown.js "></script>
+    <script src="plugin/highlight/highlight.js "></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>

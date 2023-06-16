@@ -1,94 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <title>Practica 8</title>
 
-
-    <link rel="stylesheet" href="dist/reset.css">
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-</head>
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="reveal">
-        <div class="slides">
+      <div class="slides">
+        <section>
+          <h1>Hola a todos</h1>
+        </section>
+        <section>
+          <h2>Inicio del curso</h2>
+        </section>
+        <section>
+          <section>
+            ya comenzamos a ver y trabajar con clases ya vimos como se consituye
+            un constructor, ahora vamos a trabajar un poco mas a fondo con
+            clases y ver
+          </section>
+          <section>
+            como ya vimos se pueden definir de esta forma los elementos
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+  def myfunc(self):
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+p1.myfunc()
+					</code></pre>
+          </section>
+          <section>
+            aunque en este caso el elemento self puede ser reemplazado por
+            cualquier cosa, yo no recomiendo esto, pues puedec complicar por
+            estandar o hacerlo mas enredoso<br />
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+                class Person:
+                def __init__(mysillyobject, name, age):
+                    mysillyobject.name = name
+                    mysillyobject.age = age
+
+                def myfunc(abc):
+                    print("Hello my name is " + abc.name)
+
+                p1 = Person("John", 36)
+                p1.myfunc() 
+            </code></pre>
+          </section>
+          <section>
+            <br />
+            en ocasiones y esto puede llegar a pasar muchas veces, mas en
+            trabajas en equipo puede que vayas a definir un metodo y aun no lo
+            vas a desarrollar, para esto usamos pass
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+                        class Person:
+                            pass
+                    </code></pre>
+          </section>
+        </section>
+
+        <section>Como acceder a los elementos?</section>
+        <section>
+          Getter and Setter en python
+
+          <section>
+            por buenas praticas y para hacer uso de una propuedad llamada
+            <strong> ENCAPSULAMIENTO </strong>
+          </section>
+
+          <section>
+            cada variable o atributo que tiene la clase tiene que tener un
+            metodo para poder definir que se le va a poner informacion <br />
+            de esta forma garantizamos siempre trabajar con esa informacion, y
+            no alterar nuestro flujo del programa
+          </section>
+          <section>
+            Estos metodos son llamados, Getter (obtención)<br />
+            y Setter (establecimiento)
+          </section>
+
+          <section>
+            Propiedad Getter
+            <pre
+              data-id="code-animation"
+            ><code class="hljs" data-trim data-line-numbers>
+                    @property    
+                    def edad(self):
+                        return self._edad   
+                </code></pre>
             <section>
-                <h1>Hola a todos</h1>
+              Propiedad Setter
+              <pre
+                data-id="code-animation"
+              ><code class="hljs" data-trim data-line-numbers>
+                        @edad.setter
+                        def edad(self, edad):
+                            self._edad = edad 
+                        </code></pre>
             </section>
-            <section>
-                <h2>Inicio del curso</h2>
-            </section>
-            <section>
-
-                <section> Hasta este punto la programacion ha sido modular, y secuencia, pero hay un paradigma mas utilizado en el mundo del software
-                </section>
-                <section> este paradigma nos ayuda a trabjar menor de muchas maneras la abstraccion, pero primero tenemos que definir abstraccion
-                </section>
-                <section> la abstraccion se define como el proceso que se usa para poder detectar las partes importantes sobre el hecho que estamos trabajando<br>
-                </section>
-                <section>
-                    <br> ejemplos de abstraccion
-                    <br>
-                </section>
-                <section>
-                    esta es una de las habilidades mas necesarias para poder convertirse en diseñador de software
-
-                </section>
-                <section>
-                    entre otras cosas hay mas elementos que podemos definir de las clases
-                </section>
-            </section>
-
-            <section>Que es una clase?
-
-            </section>
-            <section> Programacion orientada a objetos
-                <section>
-                    Objeto: <br> Métodos: <br>Atributos:
-
-
-
-
-                </section>
-
-                <section>
-                    por lo general el paradigma de python esta orientado a objetos, muchas de las cosas que hemos trabajo hasta este momento tienen propiedades de objetos
-
-                </section>
-                <section>
-                    por ejemplo los Strings
-
-                </section>
-                <section>
-                    como se codifica una clase class <br> MyClass: x = 5
-                    <br> p1 = MyClass() print(p1.x)
-
-
-
-                </section>
-                <section>
-                    class Person: <br>:identacion: def __init__(self, name, age): <br>:identacion:self.name = name <br>self.age = age <br>p1 = Person("John", 36) <br>print(p1.name) <br>print(p1.age)
-                </section>
-                <section>
-                    <p>
-                        class Person: <br> def __init__(self, name, age): <br>self.name = name <br> self.age = age <br>def myfunc(self): <br>print("Hello my name is " + self.name) <br>p1 = Person("John", 36) <br>p1.myfunc()
-                    </p>
-                </section>
-                <section>
-                    Crear una clase basica para poder usar
-                </section>
-            </section>
-            <SECtion>las clases nos ayudan bastante a clarificar el codigo y separarlo, despues de esto vienen otras propiedasdes de las que vamos a hacer uso, y nos ayudaran a clasificar mejor la informacion
-
-            </section>
-        </div>
+          </section>
+        </section>
+      </div>
     </div>
 
     <script src="dist/reveal.js "></script>
@@ -96,16 +135,15 @@
     <script src="plugin/markdown/markdown.js "></script>
     <script src="plugin/highlight/highlight.js "></script>
     <script>
-        // More info about initialization & config:
-        // - https://revealjs.com/initialization/
-        // - https://revealjs.com/config/
-        Reveal.initialize({
-            hash: true,
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
 
-            // Learn about plugins: https://revealjs.com/plugins/
-            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
-        });
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
     </script>
-</body>
-
+  </body>
 </html>
